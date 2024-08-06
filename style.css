@@ -13,8 +13,14 @@
     box-sizing: border-box;
 }
 
+/* ------- Layout ------- */
 body {
     background-color: var(--accent-color);
+}
+
+.container{
+    width: 90vw;
+    margin: 0 auto;
 }
 
 ul{
