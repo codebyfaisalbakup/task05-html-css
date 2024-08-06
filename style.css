@@ -18,20 +18,107 @@ body {
     background-color: var(--accent-color);
 }
 
-.container{
+.container {
     width: 90vw;
     margin: 0 auto;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-/* ------- Reusable ------- */
+img {
+    width: 100%;
+    object-fit: cover;
+}
 
+input,
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+/* ------- Reusable ------- */
+.icon {
+    width: 1.8rem;
+    cursor: pointer;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* ------- States ------- */
+/* Navbar */
+nav {
+    background-color: var(--primary-color);
+}
+
+nav .container {
+    gap: 1rem;
+}
+
+nav .logo {
+    width: 8rem;
+}
+
+nav .logo .icon {
+    width: 100%;
+}
+
+nav .input-group {
+    background-color: var(--accent-color);
+    border-radius: 0.1rem;
+    overflow: hidden;
+    padding-right: 0.3rem;
+    flex-basis: 40%;
+}
+
+nav input {
+    font-size: 1.2rem;
+    caret-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+nav .add-to-carts {
+    gap: 0.5rem;
+}
+
+/* Hero Section */
+
+/* ------- Media Queries ------- */
+@media (width<=850px) {
+    html {
+        font-size: 95%;
+    }
+
+    nav .input-group {
+        flex-basis: 60%;
+    }
+}
+
+@media (width<=650px) {
+    html {
+        font-size: 90%;
+    }
+
+    .container {
+        width: 96vw;
+    }
+
+    nav .logo {
+        width: 6rem;
+    }
+
+    nav .icon{
+        width: 1.2rem;
+    }
+}
