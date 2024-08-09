@@ -276,8 +276,8 @@ nav .add-to-carts {
 }
 
 /* Smart Watches */
-.laptops.cards {
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+.watches.cards {
+    grid-template-columns: repeat(auto-fill, minmax(3fr, 2fr));
 }
 
 /* ------- Media Queries ------- */
