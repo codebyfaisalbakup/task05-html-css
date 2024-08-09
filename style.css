@@ -97,7 +97,7 @@ button {
     width: 100%;
 }
 
-.card-image img{
+.card-image img {
     max-width: 15rem;
     height: 100%;
 }
@@ -107,13 +107,14 @@ button {
 }
 
 .card-name {
+    font-size: larger;
     margin-bottom: 0.5rem;
 }
 
 .add-to-wishlist {
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 0.4rem;
+    right: 0.4rem;
     padding: 0.2rem;
     border-radius: 50%;
     background-color: var(--secondary-color);
@@ -122,7 +123,7 @@ button {
 }
 
 .add-to-wishlist .icon {
-    width: 1rem;
+    width: 1.3rem;
 }
 
 .card:hover .add-to-wishlist {
@@ -149,8 +150,8 @@ button {
 
 .label {
     position: absolute;
-    top: 2%;
-    left: 2%;
+    top: 0.5rem;
+    left: 0.5rem;
     padding: 0.3rem 0.8rem;
     border-radius: 0.3rem;
     color: var(--accent-color);
@@ -277,7 +278,32 @@ nav .add-to-carts {
 
 /* Smart Watches */
 .watches.cards {
-    grid-template-columns: repeat(auto-fill, minmax(3fr, 2fr));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 0.5rem;
+    justify-content: space-between;
+}
+
+.watch.card {
+    display: flex;
+    align-items: end;
+    flex-basis: 48%;
+    max-width: 40rem;
+}
+
+.watch-image {
+    width: 50%;
+}
+
+.watch .watch-detail {
+    width: 49%;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.watch-name {
+    font-size: x-large;
+    text-wrap: nowrap;
 }
 
 /* ------- Media Queries ------- */
@@ -288,6 +314,18 @@ nav .add-to-carts {
 
     nav .input-group {
         flex-basis: 60%;
+    }
+
+    .watches.cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        gap: 2rem;
+    }
+    .watch.card {
+        display: grid;
+    }
+    .watch.card>div {
+        width: 100%;
     }
 }
 
