@@ -3,7 +3,7 @@
 :root {
     --primary-color: #304463;
     --secondary-color: #7D8ABC;
-    --accent-color: #e3e9f1;
+    --accent-color: #ffffff;
 }
 
 /* ------- Base Line ------- */
@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -63,6 +64,100 @@ button {
     align-items: center;
 }
 
+.intro-text {
+    font-size: 2rem;
+    margin: 3rem 0 0.5rem;
+    text-shadow: -1px -2px 1px var(--secondary-color);
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    padding: 0 0.8rem 1rem;
+    background-color: rgba(255, 255, 255, 0.63);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding-top: 1rem;
+    border-radius: 0.3rem;
+    transition: all 0.1s;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 0 2rem 0 rgba(61, 61, 61, 0.15);
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-image img{
+    max-width: 15rem;
+    height: 100%;
+}
+
+.card-detail sup {
+    font-size: 0.8rem;
+}
+
+.card-name {
+    margin-bottom: 0.5rem;
+}
+
+.add-to-wishlist {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    padding: 0.2rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.add-to-wishlist .icon {
+    width: 1rem;
+}
+
+.card:hover .add-to-wishlist {
+    opacity: 1;
+}
+
+.add-to-cart {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    transition: all 0.1s;
+}
+
+.add-to-cart:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px var(--primary-color);
+}
+
+.label {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    color: var(--accent-color);
+    background-color: #50B3D0;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.08);
+}
+
 /* ------- States ------- */
 /* Navbar */
 nav {
@@ -79,7 +174,7 @@ nav .logo {
 
 nav .input-group {
     background-color: var(--accent-color);
-    border-radius: 0.1rem;
+    border-radius: 5rem;
     overflow: hidden;
     padding-right: 0.3rem;
     flex-basis: 40%;
@@ -110,6 +205,7 @@ nav .add-to-carts {
 
 #hero .container>div {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.123);
+    border-radius: 0.3rem;
 }
 
 .categories {
@@ -117,7 +213,6 @@ nav .add-to-carts {
     width: 25%;
     min-width: 15rem;
     text-wrap: nowrap;
-    border-radius: 0.1rem;
 }
 
 .categories h2 {
@@ -127,12 +222,12 @@ nav .add-to-carts {
     margin-bottom: 1rem;
 }
 
-.categories ul{
+.categories ul {
     display: grid;
     gap: 1rem;
 }
 
-.categories li{
+.categories li {
     box-shadow: 0 0 1px 0 var(--secondary-color);
 }
 
@@ -157,7 +252,6 @@ nav .add-to-carts {
     background-repeat: no-repeat;
     background-size: contain 100%;
     background-position: center;
-    border-radius: 0.1rem;
     flex-direction: column;
     justify-content: center;
 }
@@ -167,6 +261,7 @@ nav .add-to-carts {
     text-align: center;
     font-weight: normal;
     padding: 1rem;
+    border-radius: 0.3rem;
     background-image: linear-gradient(to left, #2b699ca8, #201e43a4);
     line-height: 3rem;
 }
@@ -175,16 +270,20 @@ nav .add-to-carts {
     font-size: 1.8rem;
 }
 
+/* Laptops */
+.laptops.cards {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
 
+/* Smart Watches */
+.laptops.cards {
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
 
 /* ------- Media Queries ------- */
 @media (width<=850px) {
     html {
         font-size: 95%;
-    }
-
-    .container {
-        width: 95vw;
     }
 
     nav .input-group {
@@ -197,25 +296,20 @@ nav .add-to-carts {
         font-size: 90%;
     }
 
-    .container {
-        width: 97vw;
-    }
-
     .icon {
         width: 1.5rem;
     }
 
-    #hero .container {
+    #hero {
         height: max-content;
     }
 
     .categories {
         width: 100%;
         text-align: center;
-        
     }
 
-    .categories ul{
+    .categories ul {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -224,7 +318,8 @@ nav .add-to-carts {
         font-size: 1.1rem;
     }
 
-    .hero-img{
+    .hero-img {
         display: none;
     }
+
 }
