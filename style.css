@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* ------- Layout ------- */
@@ -69,10 +70,6 @@ nav .logo {
     width: 8rem;
 }
 
-nav .logo .icon {
-    width: 100%;
-}
-
 nav .input-group {
     background-color: var(--accent-color);
     border-radius: 0.1rem;
@@ -114,11 +111,7 @@ nav .add-to-carts {
         width: 96vw;
     }
 
-    nav .logo {
-        width: 6rem;
-    }
-
-    nav .icon{
-        width: 1.2rem;
+    .icon {
+        width: 1.5rem;
     }
 }
