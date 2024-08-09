@@ -232,6 +232,10 @@ nav .add-to-carts {
     box-shadow: 0 0 1px 0 var(--secondary-color);
 }
 
+.categories li a.disabled {
+    color: #3044637a !important;
+    background-color: inherit !important;
+}
 .categories ul a {
     display: block;
     padding: 0.3rem 1rem;
@@ -306,6 +310,37 @@ nav .add-to-carts {
     text-wrap: nowrap;
 }
 
+/* Footer */
+
+footer .scoials {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 1rem;
+    gap: 1rem;
+}
+
+footer .scoials i {
+    font-size: 2.2rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    transition: all 0.2s;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.15);
+}
+
+footer .scoials i:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+}
+
+footer .cpr {
+    text-align: center;
+    padding: 1rem;
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+}
+
 /* ------- Media Queries ------- */
 @media (width<=850px) {
     html {
@@ -321,9 +356,11 @@ nav .add-to-carts {
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
         gap: 2rem;
     }
+
     .watch.card {
         display: grid;
     }
+
     .watch.card>div {
         width: 100%;
     }
