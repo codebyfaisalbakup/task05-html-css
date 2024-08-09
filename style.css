@@ -204,4 +204,27 @@ nav .add-to-carts {
     .icon {
         width: 1.5rem;
     }
+
+    #hero .container {
+        height: max-content;
+    }
+
+    .categories {
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .categories ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-img{
+        display: none;
+    }
 }
