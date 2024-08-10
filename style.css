@@ -83,7 +83,7 @@ button {
     background-color: rgba(255, 255, 255, 0.63);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.08);
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     border-radius: 0.3rem;
     transition: all 0.1s;
     position: relative;
@@ -157,6 +157,7 @@ button {
     color: var(--accent-color);
     background-color: #50B3D0;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.08);
+    font-size: 0.8rem;
 }
 
 /* ------- States ------- */
@@ -280,6 +281,11 @@ nav .add-to-carts {
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
+.laptop-spec{
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
 /* Smart Watches */
 .watches.cards {
     display: flex;
@@ -307,7 +313,6 @@ nav .add-to-carts {
 
 .watch-name {
     font-size: x-large;
-    text-wrap: nowrap;
 }
 
 /* Footer */
